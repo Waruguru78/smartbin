@@ -1,0 +1,1 @@
+The project is a smart waste bin that has ultrasonic sensors that measure waste levels in the bin and when it reaches a certain threshold it notifies the waste collection company to empty the waste. It incorporates an Arduino board, lcd display for displaying the waste levels and an esp8266 which helps the IoT to connect to the WiFi thus enabling communication.
