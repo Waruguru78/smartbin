@@ -3,7 +3,7 @@
 #include <Ultrasonic.h>
 #include <Adafruit_MQTT.h>
 #include <Adafruit_MQTT_Client.h>
-#include <ESP8266WiFi.h>
+//#include <ESP8266WiFi.h>
 
 // Wi-Fi credentials
 const char* ssid = "wangui";
@@ -20,7 +20,7 @@ Ultrasonic ultrasonic(10, 11, 20);
 #define AIO_SERVER      "io.adafruit.com"
 #define AIO_SERVERPORT  1883
 
-WiFiClient espClient;
+//WiFiClient espClient;
 Adafruit_MQTT_Client mqtt(&espClient, AIO_SERVER, AIO_SERVERPORT, AIO_USERNAME, AIO_KEY);
 
 // MQTT setup
