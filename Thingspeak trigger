@@ -1,0 +1,14 @@
+alert_body = "Bin almost full, schedule for pickup!";
+alert_subject = "Bin waste levels";
+alert_api_key = 'TAKkIb4yiOHaYOSUExj';
+alert_url = "https://api.thingspeak.com/alerts/send";
+
+% Create a MATLAB structure and convert it to a JSON-formatted string
+jsonStruct = struct('subject', alert_subject, 'body', alert_body);
+jsonmessage = jsonencode(jsonStruct);
+
+% Define weboptions
+options = weboptions("HeaderFields", {'ThingSpeak-Alerts-API-Key', alert_api_key; 'Content-Type', 'application/json'});
+
+% Send the request
+result = webwrite(alert_url, jsonmessage, options);
